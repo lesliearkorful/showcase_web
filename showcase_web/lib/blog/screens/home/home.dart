@@ -1,7 +1,8 @@
 import 'package:flutter_web/material.dart';
 import '../../data/articles.dart';
-import '../../data/constants.dart';
 import 'home-widgets.dart';
+
+
 
 class BlogHome extends StatefulWidget {
   @override
@@ -9,48 +10,38 @@ class BlogHome extends StatefulWidget {
 }
 
 class _BlogHomeState extends State<BlogHome> {
-  final mountWidget = ListView(
-    children: <Widget>[
-      Header(),
-      Carousel(),
-      SectionHeader(
-        title: 'Popular',
-        secondary: 'Show all'
-      ),
-      SectionItem(
-        title: 'The Festival of Colours',
-        image: '$chalewote/3.jpg',
-        category: Category.people,
-      ),
-      SectionItem(
-        title: 'Deaon Recreational',
-        image: '$deon/2.jpeg',
-        category: Category.people,
-      ),
-      SectionItem(
-        title: 'Deaon Recreational',
-        image: '$deon/2.jpeg',
-        category: Category.people,
-      ),
-      SectionItem(
-        title: 'Deaon Recreational',
-        image: '$deon/2.jpeg',
-        category: Category.people,
-      )
-    ],
-  );
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
+          alignment: Alignment.center,
           constraints: BoxConstraints(
-            maxWidth: 450
+            maxWidth: 400
           ),
-          child: mountWidget
+          child:ListView(
+            children: <Widget>[
+              Header(),
+              Carousel(),
+              SectionHeader(
+                title: 'Popular',
+                secondary: 'Show all'
+              ),
+              
+              SectionItem(
+                article: articles[1],
+              ),
+              
+              SectionItem(
+                article: articles[0],
+              ),
+
+              SectionItem(
+                article: articles[2],
+              ),
+            ],
+          ),
         )
       )
     );
