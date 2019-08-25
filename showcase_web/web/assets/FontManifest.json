@@ -1,0 +1,10 @@
+[
+    {
+      "family": "ProductSans",
+      "fonts": [
+        {
+          "asset": "fonts/Product-Sans.ttf"
+        }
+      ]
+    }
+  ]
