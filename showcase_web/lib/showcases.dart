@@ -13,10 +13,7 @@ class Showcase extends StatelessWidget {
         primaryColor: Colors.pink[900],
         fontFamily: 'ProductSans'
       ),
-      home: Container(
-        width: 400,
-        child: BlogHome(),
-      )
+      home: BlogHome(),
     );
   }
 }
