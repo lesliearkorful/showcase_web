@@ -6,5 +6,13 @@
           "asset": "fonts/Product-Sans.ttf"
         }
       ]
+    },
+    {
+      "family": "Montserrat",
+      "fonts": [
+        {
+          "asset": "fonts/Montserrat.otf"
+        }
+      ]
     }
   ]

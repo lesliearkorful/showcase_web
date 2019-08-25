@@ -1,7 +1,6 @@
 //import 'package:flutter_web_ui/ui.dart' as ui;
 import 'package:flutter_web/material.dart';
 import '../../data/constants.dart';
-import '../../data/carousel.dart';
 import '../../data/articles.dart';
 
 
@@ -37,7 +36,7 @@ class Header extends StatelessWidget {
           ),
 
           ClipOval(
-            child: Image.asset('assets/images/les.jpg', width: 50 ),
+            child: Image.asset('$avatars/les.jpg', width: 50 ),
           ),
         ],
       )
@@ -63,7 +62,7 @@ class Carousel extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: 4,
         itemBuilder: (context, index) {
-          CarouselItem data = articles[index];
+          Article data = articles[index];
 
           return Card(
             author: data.author,
@@ -140,7 +139,7 @@ class Card extends StatelessWidget {
 
                   Align(
                     alignment: Alignment.topRight,
-                    child: Icon(Icons.label_outline, color: Colors.white),
+                    child: Icon(Icons.label, color: Colors.white),
                   ),
 
                   Column(

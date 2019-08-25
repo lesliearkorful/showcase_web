@@ -3,7 +3,7 @@ import 'package:flutter_web/material.dart';
 import 'blog/screens/home/home.dart';
 
 
-class Showcase extends StatelessWidget {
+class Showcases extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

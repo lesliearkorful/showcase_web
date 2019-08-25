@@ -6,5 +6,5 @@ import 'package:flutter_web/material.dart';
 import 'showcases.dart';
 
 void main() {
-  runApp(Showcase());
+  runApp(Showcases());
 }
