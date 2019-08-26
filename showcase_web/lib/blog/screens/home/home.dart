@@ -10,7 +10,12 @@ class BlogHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(
+      body: Center(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxWidth: 450
+          ),
+          child: ListView(
             children: <Widget>[
               Header(),
               Carousel(),
@@ -32,8 +37,8 @@ class BlogHome extends StatelessWidget {
               ),
             ],
           ),
-        
-      
+        )
+      )      
     );
   }
 }
