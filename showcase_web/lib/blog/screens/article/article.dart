@@ -150,15 +150,12 @@ class _ArticlePageState extends State<ArticlePage> {
                     ),
 
                     ...widget.article.gallery.map((image) {
-                            return Container(
-                              padding: EdgeInsets.symmetric(vertical: 5),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(8)
-                              ),
-                              child: Image.asset(image),
-                            );
-                          }).toList(),
+                      return Container(
+                        padding: EdgeInsets.symmetric(vertical: 5),
+                        color: Colors.white,
+                        child: Image.asset(image),
+                      );
+                    }).toList(),
                   ],
                 ),
               ),
