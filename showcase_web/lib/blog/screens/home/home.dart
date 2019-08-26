@@ -4,23 +4,13 @@ import 'home-widgets.dart';
 
 
 
-class BlogHome extends StatefulWidget {
-  @override
-  _BlogHomeState createState() => _BlogHomeState();
-}
+class BlogHome extends StatelessWidget {
 
-class _BlogHomeState extends State<BlogHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          alignment: Alignment.center,
-          constraints: BoxConstraints(
-            maxWidth: 400
-          ),
-          child:ListView(
+      body: ListView(
             children: <Widget>[
               Header(),
               Carousel(),
@@ -42,8 +32,8 @@ class _BlogHomeState extends State<BlogHome> {
               ),
             ],
           ),
-        )
-      )
+        
+      
     );
   }
 }

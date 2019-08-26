@@ -13,7 +13,6 @@ class ArticlePage extends StatefulWidget {
 }
 
 class _ArticlePageState extends State<ArticlePage> {
-  final ScrollController listController = ScrollController();
 
   bool topReached = false;
   bool isSaved = false;
@@ -29,36 +28,10 @@ class _ArticlePageState extends State<ArticlePage> {
 
 
   @override
-  void initState() {
-    listController.addListener(() {
-      setState(() {
-        topReached = (listController.offset > 225)
-                      ? true
-                      : false;
-      });
-    });
-    super.initState();
-  }
-
-
-  @override
-  void dispose() {
-    listController.dispose();
-    super.dispose();
-  }
-
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          alignment: Alignment.center,
-          constraints: BoxConstraints(
-            maxWidth: 400
-          ),
-          child: Stack(
+      body: Stack(
             children: <Widget>[
               
               Container(
@@ -75,8 +48,6 @@ class _ArticlePageState extends State<ArticlePage> {
               Align(
                 alignment: Alignment.topCenter,
                 child: ListView(
-                  controller: listController,
-                  physics: ScrollPhysics(),
                   children: <Widget>[
 
                     SizedBox( height: (MediaQuery.of(context).size.height/2) - 30 ),
@@ -171,29 +142,15 @@ class _ArticlePageState extends State<ArticlePage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: topReached ? Colors.pink[50] : Colors.transparent
-                        ),
-                        child: IconButton(
+                      IconButton(
                           padding: EdgeInsets.all(12),
-                          icon: topReached ? backIconPink : backIcon,
+                          icon: backIcon,
                           onPressed: () => Navigator.pop(context),
-                        )
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: topReached ? Colors.pink[50] : Colors.transparent
-                        ),
-                        child: IconButton(
+                      IconButton(
                           padding: EdgeInsets.all(16),
-                          icon: isSaved
-                            ? topReached ? savedIconPink : savedIcon
-                            : topReached ? saveIconPink : saveIcon,
+                          icon: isSaved  ? savedIcon : savedIcon,
                           onPressed: () => setState(() => isSaved = !isSaved),
-                        )
                       )
                     ],
                   ),
@@ -201,8 +158,8 @@ class _ArticlePageState extends State<ArticlePage> {
               ),
             ],
           ),
-        )
-      )
+        
+      
     );
   }
 }
