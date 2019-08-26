@@ -104,13 +104,11 @@ class ArticlePage extends StatelessWidget {
                             )
                           ),
 
-                          SizedBox( height: 15 ),
-
-                          ...article.gallery,
-
                         ],
                       ),
-                    )
+                    ),
+
+                    ...article.gallery,
                   ],
                 ),
               ),
