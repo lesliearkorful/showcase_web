@@ -7,13 +7,15 @@ class ArticlePage extends StatelessWidget {
   final Article article;
   ArticlePage({ this.article });
 
-
   final Image saveIcon = Image.asset('$icons/white/017-bookmark.png');
   final Image backIcon = Image.asset('$icons/white/001-left-chevron.png');
+
+  
 
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
@@ -33,6 +35,7 @@ class ArticlePage extends StatelessWidget {
               Align(
                 alignment: Alignment.topCenter,
                 child: ListView(
+                  semanticChildCount: article.gallery.length,
                   children: <Widget>[
 
                     SizedBox( height: (MediaQuery.of(context).size.height/2) - 30 ),
@@ -103,14 +106,7 @@ class ArticlePage extends StatelessWidget {
 
                           SizedBox( height: 15 ),
 
-                          Column(
-                            children: article.gallery.map((image) {
-                              return Container(
-                                margin: EdgeInsets.symmetric(vertical: 10),
-                                child: Image.asset(image),
-                              );
-                            }).toList(),
-                          )
+                          ...article.gallery,
 
                         ],
                       ),

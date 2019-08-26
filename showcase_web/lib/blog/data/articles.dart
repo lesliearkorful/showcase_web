@@ -1,4 +1,5 @@
 import 'constants.dart';
+import 'package:flutter_web/material.dart';
 export 'constants.dart';
 
 
@@ -29,7 +30,7 @@ class Article {
   final int likes;
   final bool saved;
   final Category category;
-  final List<String> gallery;
+  final List<Image> gallery;
 
   Article({
     this.cover,
@@ -57,14 +58,14 @@ List<Article> articles = [
     authorImage : '$avatars/travels.jpg',
     time : '4 hours ago',
     category: Category.people,
-    saved: true,
+    saved: false,
     body: 'The Chale Wote Street Art Festival also known as Chale Wote is an alternative platform that brings art, music, dance and performance out into the streets. The festival targets exchanges between scores of local and international artists and patrons by creating and appreciating art together.\n\nSince 2011, CHALE WOTE has included street painting, graffiti murals, photography, theater, spoken word, interactive art installations, live street performances, extreme sports, film shows, a fashion parade, a music block party, recyclable design workshops and much more. It is the first to be organized in Accra, Ghana and has inspired similar events across the country.\n\nCheck out travelsghana.com or check out @tr_vls for more interesting places in Ghana.',
     gallery: [
-      '$chalewote/1.jpg',
-      '$chalewote/3.jpg',
-      '$chalewote/4.jpg',
-      '$chalewote/5.jpg',
-      '$chalewote/6.jpg'
+      Image.asset('$chalewote/1.jpg'),
+      Image.asset('$chalewote/3.jpg'),
+      Image.asset('$chalewote/4.jpg'),
+      Image.asset('$chalewote/5.jpg'),
+      Image.asset('$chalewote/6.jpg'),
     ]
   ),
   
@@ -75,10 +76,10 @@ List<Article> articles = [
     authorImage : '$avatars/les.jpg',
     time : '3 hours ago',
     category: Category.tech,
-    saved: true,
+    saved: false,
     body: 'So I picked this design from Dribbble and quickly brought it to life in Flutter. I loved the whole experience! and guess what? I\'ll be doing more of these as time goes on.\nLooking forward to hearing your feedback soon. Connect with me everywhere on the internet @lesliearkorful.\n\nThis UI design was made by Adrash Goldar (AdarshGo) for Fireart Studio. You may check out those pages on Dribbble.',
     gallery: [
-      '$flutter/ui.jpg',
+      Image.asset('$flutter/ui.jpg'),
     ]
   ),
 
@@ -92,12 +93,12 @@ List<Article> articles = [
     saved: false,
     body: 'We had a wild adventure at Deon Recreational Centre hidden away somewhere in Lashibi betwixt Accra and Tema. It’s confusing, we know! We had a ton of fun at Deon Recreational Centre, so much so we went there two Sundays in a row! actually three. 🙂 DRC features awesome go-karts, quad bikes, dune buggys or…\n\nCheck out travelsghana.com or check out @tr_vls for more interesting places in Ghana.',
     gallery: [
-      '$deon/2.jpeg',
-      '$deon/3.jpg',
-      '$deon/4.jpg',
-      '$deon/5.jpeg',
-      '$deon/6.jpg',
-      '$deon/7.jpg',
+      Image.asset('$deon/2.jpeg'),
+      Image.asset('$deon/3.jpg'),
+      Image.asset('$deon/4.jpg'),
+      Image.asset('$deon/5.jpeg'),
+      Image.asset('$deon/6.jpg'),
+      Image.asset('$deon/7.jpg'),
     ]
   ),
   
