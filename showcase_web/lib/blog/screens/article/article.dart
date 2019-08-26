@@ -143,10 +143,13 @@ class _ArticlePageState extends State<ArticlePage> {
                               fontSize: 18,
                             )
                           ),
+                        
 
-                          SizedBox( height: 20 ),
-
-                          ...widget.article.gallery.map((image) {
+                        ],
+                      ),
+                    ),
+                    
+                    ...widget.article.gallery.map((image) {
                             return Container(
                               margin: EdgeInsets.symmetric(vertical: 5),
                               decoration: BoxDecoration(
@@ -156,12 +159,6 @@ class _ArticlePageState extends State<ArticlePage> {
                               child: Image.asset(image),
                             );
                           }).toList(),
-
-                        ],
-                      ),
-                    ),
-
-                    
                   ],
                 ),
               ),
