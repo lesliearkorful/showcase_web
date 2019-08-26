@@ -3,28 +3,13 @@ import '../../data/articles.dart';
 
 
 
-class ArticlePage extends StatefulWidget {
+class ArticlePage extends StatelessWidget {
   final Article article;
-
   ArticlePage({ this.article });
-  
-   @override
-  _ArticlePageState createState() => _ArticlePageState();
-}
 
-class _ArticlePageState extends State<ArticlePage> {
 
-  bool topReached = false;
-  bool isSaved = false;
-
-  Image saveIcon = Image.asset('$icons/white/017-bookmark.png');
-  Image saveIconPink = Image.asset('$icons/pink/017-bookmark.png');
-
-  Image savedIcon = Image.asset('$icons/white/018-bookmarked.png');
-  Image savedIconPink = Image.asset('$icons/pink/018-bookmarked.png');
-
-  Image backIcon = Image.asset('$icons/white/001-left-chevron.png');
-  Image backIconPink = Image.asset('$icons/pink/001-left-chevron.png');
+  final Image saveIcon = Image.asset('$icons/white/017-bookmark.png');
+  final Image backIcon = Image.asset('$icons/white/001-left-chevron.png');
 
 
   @override
@@ -38,7 +23,7 @@ class _ArticlePageState extends State<ArticlePage> {
                 height: (MediaQuery.of(context).size.height / 2) + 30,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(widget.article.cover),
+                    image: AssetImage(article.cover),
                     fit: BoxFit.cover
                   ), 
                 ),
@@ -71,7 +56,7 @@ class _ArticlePageState extends State<ArticlePage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text(categories[widget.article.category],
+                          Text(categories[article.category],
                             style: TextStyle(
                               color: Colors.pink,
                               fontSize: 16,
@@ -80,7 +65,7 @@ class _ArticlePageState extends State<ArticlePage> {
 
                           SizedBox( height: 15 ),
 
-                          Text(widget.article.title,
+                          Text(article.title,
                             style: TextStyle(
                               fontSize: 26,
                             ),
@@ -93,13 +78,13 @@ class _ArticlePageState extends State<ArticlePage> {
                             children: <Widget>[
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(6),
-                                child: Image.asset(widget.article.authorImage,
+                                child: Image.asset(article.authorImage,
                                   width: 25,
                                   height: 25,
                                 ),
                               ),
                               SizedBox(width: 10),
-                              Text('${widget.article.author}   |  ${widget.article.time}',
+                              Text('${article.author}   |  ${article.time}',
                                 style: TextStyle(
                                   fontSize: 16
                                 ),
@@ -109,7 +94,7 @@ class _ArticlePageState extends State<ArticlePage> {
 
                           SizedBox( height: 20 ),
 
-                          Text(widget.article.body,
+                          Text(article.body,
                             style: TextStyle(
                               color: Colors.black54,
                               fontSize: 18,
@@ -119,7 +104,7 @@ class _ArticlePageState extends State<ArticlePage> {
                           SizedBox( height: 15 ),
 
                           Column(
-                            children: widget.article.gallery.map((image) {
+                            children: article.gallery.map((image) {
                               return Container(
                                 margin: EdgeInsets.symmetric(vertical: 10),
                                 child: Image.asset(image),
@@ -143,14 +128,14 @@ class _ArticlePageState extends State<ArticlePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       IconButton(
-                          padding: EdgeInsets.all(12),
+                          padding: EdgeInsets.all(16),
                           icon: backIcon,
                           onPressed: () => Navigator.pop(context),
                       ),
                       IconButton(
                           padding: EdgeInsets.all(16),
-                          icon: isSaved  ? savedIcon : savedIcon,
-                          onPressed: () => setState(() => isSaved = !isSaved),
+                          icon: saveIcon,
+                          onPressed: () {},
                       )
                     ],
                   ),
