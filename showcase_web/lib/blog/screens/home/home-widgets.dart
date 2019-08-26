@@ -60,7 +60,7 @@ class Carousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 270,
+      height: 300,
       width: double.maxFinite,
       child: PageView.builder(
         controller: pageController,
@@ -147,7 +147,6 @@ class Card extends StatelessWidget {
                         Text('${article.title}',
                           style: TextStyle(
                             color: Colors.white,
-                            fontWeight: FontWeight.w500,
                             fontFamily: 'Montserrat',
                             fontSize: 28,
                           ),

@@ -90,7 +90,7 @@ class _ArticlePageState extends State<ArticlePage> {
                         ),
                         boxShadow: [
                           BoxShadow(
-                            offset: Offset(0, -5),
+                            offset: Offset(0, -3),
                             color: Colors.black12,
                             blurRadius: 8
                           )
