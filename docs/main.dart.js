@@ -51783,8 +51783,8 @@ return H.h([S.Q5(t,s,"The Chale Wote Street Art Festival also known as Chale Wot
 u($,"a15","VS",function(){return P.XK()})
 u($,"a0W","VP",function(){var t=$.PW()
 return P.bc(["chalewote-festival",t[0],"flutter",t[1],"deon-recreational-centre",t[2]],P.m,S.i5)})
-u($,"a26","PV",function(){var t="This was based on a UI from Adarsh Goldar on Dribbble. I included content from Travels Ghana.",s="images/references/blog.png"
-return C.a.gB3(H.h([M.TJ("26/08/2019",t,s,"Blog UI","/blog",new Y.zd(null)),M.TJ("03/09/2019",t,s,"Social App UI","/social_app",Y.Yc())],[M.k0])).b2(0)})
+u($,"a26","PV",function(){var t="This was based on a UI from Adarsh Goldar on Dribbble. I included content from Travels Ghana."
+return C.a.gB3(H.h([M.TJ("26/08/2019",t,"images/references/blog.png","Blog UI","/blog",new Y.zd(null)),M.TJ("03/09/2019",t,"images/references/social_app.png","Social App UI","/social_app",Y.Yc())],[M.k0])).b2(0)})
 u($,"a1P","yo",function(){return Q.r3(4278781774)})
 u($,"a1S","PU",function(){return Q.r3(4294946304)})
 u($,"a1R","Wg",function(){return Q.r3(4294923327)})
