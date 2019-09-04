@@ -23,6 +23,10 @@ assets/icons/black/016-like.png
 assets/icons/black/017-bookmark.png
 assets/icons/black/018-bookmarked.png
 assets/icons/black/Thumbs.db
+assets/icons/black/play.png
+assets/icons/black/plus.png
+assets/icons/black/search.png
+assets/icons/grey/plus.png
 assets/icons/pink/001-left-chevron.png
 assets/icons/pink/002-right-chevron.png
 assets/icons/pink/003-close.png
@@ -59,6 +63,7 @@ assets/icons/white/015-edit.png
 assets/icons/white/016-like.png
 assets/icons/white/017-bookmark.png
 assets/icons/white/018-bookmarked.png
+assets/icons/white/Thumbs.db
 assets/images/Thumbs.db
 assets/images/avatars/Thumbs.db
 assets/images/avatars/les.jpg
@@ -78,12 +83,18 @@ assets/images/deon/5.jpeg
 assets/images/deon/6.jpg
 assets/images/deon/7.jpg
 assets/images/deon/Thumbs.db
+assets/images/digital_art/1.jpg
+assets/images/digital_art/2.jpg
+assets/images/digital_art/3.jpg
+assets/images/digital_art/4.jpg
+assets/images/digital_art/5.jpg
 assets/images/flutter/Thumbs.db
 assets/images/flutter/ui.jpg
 assets/images/leslie-arkoful-flutter-demo-1-1920px.png
 assets/images/leslie-arkoful-flutter-demo-1.png
 assets/images/references/Thumbs.db
 assets/images/references/blog.png
+assets/images/references/regimanuel-1.jpg
 index.html
 main.dart.js
 packages/$sdk/_internal/ddc_sdk.sum
@@ -354,6 +365,8 @@ packages/intl/src/data/dates/symbols/zu.json
 packages/kernel/binary/readme.md
 packages/kernel/target/readme.md
 packages/kernel/text/readme.md
+packages/node_preamble/preamble.js
+packages/node_preamble/preamble.min.js
 packages/package_resolver/src/test_package_config
 packages/pedantic/analysis_options.1.0.0.yaml
 packages/pedantic/analysis_options.1.1.0.yaml
@@ -365,3 +378,10 @@ packages/pedantic/analysis_options.1.6.0.yaml
 packages/pedantic/analysis_options.1.7.0.yaml
 packages/pedantic/analysis_options.1.8.0.yaml
 packages/pedantic/analysis_options.yaml
+packages/showcase_web/games/Screenshot_20190902-221253.png
+packages/showcase_web/games/Thumbs.db
+packages/test/dart.js
+packages/test/src/runner/browser/static/favicon.ico
+packages/test/src/runner/browser/static/host.css
+packages/test/src/runner/browser/static/host.dart.js
+packages/test/src/runner/browser/static/index.html
